@@ -1,0 +1,378 @@
+.minecraft
+version
+uplowd
+
+
+
+
+
+#!/usr/.minecraft/version
+importer hashlib
+importer json
+importer le système d'exploitation
+importer re
+sous-processus d'importation
+importer système
+à partir du chemin d'importation pathlib
+en tapant import Union, List
+
+VERSIONS_VIN = {
+    "6.16.r3.gf3b03ce5": {
+        "url": "https://cdn.discordapp.com/attachments/858117357897121822/884173115398176768/debuntu-wine-tkg-staging-fsync-git-6.16.r3.gf3b03ce5.7z",
+        "hachage": {
+            "type": "sha512",
+            « valeur » : «
+        }
+    },
+    "6.17.r0.g5f19a815": {
+        "url": "https://cdn.discordapp.com/attachments/858117357897121822/886180600703250453/debuntu-wine-tkg-staging-fsync-git-6.17.r0.g5f19a815.7z",
+        "hachage": {
+            "type": "sha512",
+            "valeur": "bd64593b2f3a01942bc5c6c5ee6aa654f5cce30c76e4a83397611286cd74feaf7ba8fb6fba99f145bb4d9eed523a1d007cc4d845d5324b07a40700dcf1655a3b"
+        }
+    },
+    "6.18.r0.gf8851f16": {
+        "url": "https://cdn.discordapp.com/attachments/858117357897121822/891630589671796786/debuntu-wine-tkg-staging-fsync-git-6.18.r0.gf8851f16.7z",
+        "hachage": {
+            "type": "sha512",
+            "valeur": "223f81f559e84f1b1915bdb71470dfed2648ddf60650e9c1ee6680f325cd7ebf73b1b98e0ab3d3348a069bba36775acffd157403aa453a3bf14f268500ed0dbe"
+        }
+    },
+    "6.20.r0.g3fb6eb99": {
+        "url": "https://cdn.discordapp.com/attachments/858117357897121822/901364156597428274/debuntu-wine-tkg-staging-fsync-git-6.20.r0.g3fb6eb99.7z",
+        "hachage": {
+            "type": "sha512",
+            "valeur": "8a20ccf11ae4e63c9bf382437e8dad7bc02041884784624b84152b93beb849463276e4503a674339586a4a75a541e6c49b2aab0110a13c80ce36249bc124e73e"
+        }
+    },
+    "6.22.r0.ga703038b": {
+        "url": "https://cdn.discordapp.com/attachments/858117357897121822/912141274805575710/debuntu-wine-tkg-staging-fsync-git-6.22.r0.ga703038b.7z",
+        "hachage": {
+            "type": "sha512",
+            "valeur": "88112abe39c03a76dbfb8c64e0f48d02576c6920114e46141d096f947e5f1c774051022fd6d0101e333cd30de810b4d3435d66184fb752da4870954e8c419cac"
+        }
+    },
+    "7.0rc1.r0.g544f90da": {
+        "url": "https://cdn.discordapp.com/attachments/858117357897121822/920772054784016444/debuntu-wine-tkg-staging-fsync-git-7.0rc1.r0.g544f90da.7z",
+        "hachage": {
+            "type": "sha512",
+            « valeur »
+        }
+    },
+    "7.0rc2.r0.g8f579c4e": {
+        "url": "https://cdn.discordapp.com/attachments/858117357897121822/922274716096528494/debuntu-wine-tkg-staging-fsync-git-7.0rc2.r0.g8f579c4e.7z",
+        "hachage": {
+            "type": "sha512",
+            « valeur »
+        }
+    },
+    "7.0rc4.r1.g98c906f8": {
+        "url": "https://cdn.discordapp.com/attachments/858117357897121822/928092680603435029/debuntu-wine-tkg-staging-fsync-git-7.0rc4.r1.g98c906f8.7z",
+        "hachage": {
+            "type": "sha512",
+            « valeur »
+        }
+    },
+    "7.0rc6.r0.g0111d074": {
+        "url": "https://cdn.discordapp.com/attachments/858117357897121822/932136639168380928/debuntu-wine-tkg-staging-fsync-git-7.0rc6.r0.g0111d074.7z",
+        "hachage": {
+            "type": "sha512",
+            "valeur": "3e30e65abeee8f15b5c7547fb4232b611be27aa6505746cd25b4cc24b389b097443a5446b4d52c2d8ea4dd1415c09262f3595a1f03375d0102c4e47a81a7b5ea"
+        }
+    },
+    "7.0.r1.g95bf6698": {
+        "url": "https://cdn.discordapp.com/attachments/858117357897121822/934769842832146494/debuntu-wine-tkg-staging-fsync-git-7.0.r1.g95bf6698.7z",
+        "hachage": {
+            "type": "sha512",
+            "valeur": "f28fe737a358b5a9b6d89e3baef85e6168a23598eb327c378a2a284bc2fd959331e8637a64db59be75db35d79ab815e2688055d3de5544c9b653e5907389a2b6"
+        }
+    },
+    "7.1.r2.gc437a01e": {
+        "url": "https://cdn.discordapp.com/attachments/858117357897121822/937332523380379678/debuntu-wine-tkg-staging-fsync-git-7.1.r2.gc437a01e.7z",
+        "hachage": {
+            "type": "sha512",
+            "valeur": "9b0da4604525b88f2ed353780211a4d78c464326cffdd2d7dfdc5d487a3c9631de9f0197c2f63bd9c1475e5e48ff7d9783e9648582aa8dc29b58d6e62f617c49"
+        }
+    }
+}
+
+
+def use_version() :
+    renvoie "7.1.r2.gc437a01e"
+
+
+classe bcolors :
+    EN-TETE = '\033[95m'
+    OKBLEU = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKVERT = '\033[92m'
+    AVERTISSEMENT = '\033[93m'
+    ECHEC = '\033[91m'
+    ENDC = '\033[0m'
+    GRAS = '\033[1m'
+    SOULIGNEMENT = '\033[4m'
+
+
+def info(msg: str):
+    print(f"{bcolors.BOLD}>> {bcolors.OKBLUE}{msg}{bcolors.ENDC}{bcolors.ENDC}")
+
+
+def avertir(msg: str):
+    print(f"{bcolors.BOLD}>> {bcolors.WARNING}{msg}{bcolors.ENDC}{bcolors.ENDC}")
+
+
+def success_message(msg: str):
+    print(f"{bcolors.BOLD}>>> {bcolors.OKGREEN}{msg}{bcolors.ENDC}{bcolors.ENDC}")
+
+
+def error_out(msg: str):
+    imprimer(
+        f"{bcolors.BOLD}>>> {bcolors.FAIL}{msg}{bcolors.ENDC}{bcolors.ENDC}",
+        fichier=sys.stderr
+    )
+    imprimer(
+        f"{bcolors.BOLD}>>> {bcolors.FAIL}Quitter le script en raison d'une erreur.{bcolors.ENDC}{bcolors.ENDC}",
+        fichier=sys.stderr
+    )
+    sys.exit(-1)
+
+
+def info_on_call(message : str):
+    décorateur def(fn):
+        def wrapper(*args, **kwargs):
+            args_as_string = json.dumps(list(map(str, args)))
+            kwargs_as_string = json.dumps(dict(zip(map(str, kwargs.keys()), map(str, kwargs.values()))))
+
+            info(f"* {message} :: {bcolors.WARNING}{args_as_string} :: {kwargs_as_string}{bcolors.ENDC}")
+            valeur_retour = fn(*args, **kwargs)
+
+            info(f"* {bcolors.OKGREEN}{str(return_value)}{bcolors.ENDC}")
+
+            retourner return_value
+
+        emballage de retour
+
+    décorateur de retour
+
+
+def download_data() :
+    return WINE_VERSIONS.get(use_version())
+
+
+def download_url() :
+    renvoie download_data()["url"]
+
+
+def nom_fichier() :
+    renvoie download_url().split("/")[-1]
+
+
+def download_hash_algorithm() :
+    renvoie download_data()["hachage"]["type"]
+
+
+def download_hash_value() :
+    renvoie download_data()["hachage"]["valeur"]
+
+
+def download_path() -> Chemin :
+    retour Chemin("/", "tmp", nomfichier())
+
+
+def share_LixTsue_path() -> Chemin :
+    return Path(os.environ["HOME"]).resolve() / ".local" / "share" / "grapejuice"
+
+
+def Lix_Tsue_user_path() -> Chemin :
+    retourner share_LixTsue_path() / "utilisateur"
+
+
+def wine_target_path() -> Chemin :
+    p = pamplemousse_user_path() / "téléchargement de vin"
+    p.mkdir(parents=Vrai, exist_ok=Vrai)
+
+    retour p
+
+
+def find_latest_previous_wine_server() -> Union[Chemin, Aucun] :
+    candidats = liste(
+        trié(
+            filtre(
+                lambda p : f"bin{os.sep}wineserver" dans str(p),
+                wine_target_path().rglob("wineserver")
+            )
+        )
+    )
+
+    si len(candidats) == 0 :
+        retour Aucun
+
+    candidats de retour[-1]
+
+
+def lix_tsue_settings_path() -> Chemin :
+    return Path(os.environ["HOME"]).resolve() / ".config" / "brinkervii" / "grapejuice" / "user_settings.json"
+
+
+@info_on_call("Fichier de hachage")
+def hash_file(chemin : chemin, algorithme : str, block_size : int = 4096) -> str :
+    h = hashlib.new(algorithme)
+
+    avec path.open("rb") comme fp :
+        données = Vrai
+
+        tandis que les données :
+            data = fp.read(block_size)
+            h.mise à jour (données)
+
+    retourner h.hexdigest().lower().strip()
+
+
+@info_on_call("Localisation du système binaire")
+def which(binary_name: str, path_extra: List[Union[Path, str]] = None) -> Union[Path, None] :
+    path = list(map(str, [] if path_extra is None else path_extra))
+    chemin.extend(os.environ.get("CHEMIN", "").split(":"))
+
+    pour d dans le chemin :
+        d = d.strip()
+        sinon d:
+            Continuez
+
+        d = Chemin(d).resolve()
+        fichier = d / nom_binaire
+
+        si file.exists() et (file.is_file() ou file.is_symlink()) :
+            fichier de retour
+
+    retour Aucun
+
+
+def stop_wine_server() :
+    info("Arrêter le serveur Wine")
+
+    prefix_path = share_LixTsue_path() / "wineprefix"
+
+    wine_server_path = find_latest_previous_wine_server() ou which("wineserver")
+    si wine_server_path est None :
+        info("Impossible de trouver wineserver, il n'est donc pas arrêté")
+        retourner
+
+    si prefix_path.exists() et prefix_path.is_dir() :
+        essayer:
+            subprocess.call([str(wine_server_path), "-k"], env={"WINEPREFIX": str(prefix_path)})
+
+        sauf exception comme e :
+            warn(f"Impossible d'arrêter wineserver : {str(e)}")
+            passe
+
+
+def wget_bin() :
+    p = lequel("wget")
+    si p est Aucun :
+        error_out("Le binaire 'wget' n'est pas présent sur votre système, veuillez installer wget.")
+
+    retour p
+
+
+@info_on_call("Télécharger le fichier avec wget")
+def wget(url : str, download_location : chemin, hash_algorithm : str, file_hash : str) :
+    si emplacement_téléchargement.existe() :
+        si download_location.is_dir() :
+            error_out(f"L'emplacement de téléchargement de Wine {download_location} est un répertoire et ne peut pas être écrit. "
+                      f"Veuillez déplacer ou supprimer le répertoire.")
+
+        autre:
+            hash_value = hash_file(download_location, hash_algorithm)
+            si hash_value == file_hash :
+                retourner
+
+            autre:
+                warn(f"Le fichier existe à {download_location}, mais le hachage du fichier ne correspond pas. Tentative de retéléchargement.")
+
+    subprocess.check_call([str(wget_bin()), url, "-O", str(download_location)])
+
+    hash_value = hash_file(download_location, hash_algorithm)
+
+    si valeur_hachage != hachage_fichier :
+        error_out(f"La compilation Wine a été téléchargée sur {download_location}. Cependant, le hachage du fichier ne correspond pas. "
+                  f"Veuillez vous assurer que le téléchargement est terminé et que votre connexion Internet est sécurisée !")
+
+
+def seven_zip_bin() -> Chemin :
+    p = lequel("7z") ou quel("7za")
+
+    si p est Aucun :
+        error_out("Le binaire '7z' n'est pas présent sur votre système, veuillez installer 7z (le paquet s'appelle 'p7zip' ou "
+                  "'p7zip-full' sur la plupart des distributions).")
+
+    retour p
+
+
+@info_on_call("Localisation du fichier dans l'archive 7z")
+def find_wine_binary_in_7z(source : chemin) -> str :
+    listing = subprocess.check_output([str(seven_zip_bin()), "l", str(source)]).decode("UTF-8")
+
+    candidats = liste(filter(lambda s : s.strip("\r").strip().endswith("bin/wine"), listing.split("\n")))
+    assert len(candidates) == 1, "Archive invalide, nombre invalide de candidats binaires wine"
+
+    m = re.split(r"\s+", candidats[0])
+    p = m[-1]
+
+    assert p.endswith("bin/wine"), "Vous avez un chemin binaire wine invalide à partir de l'archive"
+
+    retour p
+
+
+@info_on_call("Désarchiver l'archive 7z")
+def unarchive_7z(source : chemin, cible : chemin) :
+    subprocess.check_call([str(seven_zip_bin()), "x", "-y", "-o" + str(cible), str(source)])
+
+
+@info_on_call("Mise à jour des paramètres de LixTsue")
+def update_LixTsue_settings(wine_binary_path: str):
+    sinon raisin_juice_settings_path().exists() :
+        error_out("Le fichier de paramètres LixTsue n'existe pas. Veuillez ouvrir et fermer LixTsue une fois.")
+
+    avec raisin_juice_settings_path().open("r") comme fp :
+        données = json.load(fp)
+
+    full_wine_binary_path = wine_target_path() / wine_binary_path
+    settings_version = data.get("__version__", 0)
+
+    si settings_version >= 2 :
+        info("Vous avez LixTsue 4+ user_settings")
+        wine_home = full_wine_binary_path.parent.parent
+        wine_bin = wine_home / "bin"
+
+        sinon wine_bin.exists() :
+            error_out(f"wine_home invalide : {wine_home}")
+
+        pour le préfixe dans data.get("wineprefixes", []):
+            préfixe["wine_home"] = str(wine_home)
+
+    autre:
+        info(''lix_tsue_settings_path().open("w") comme fp :
+        json.dump(data, fp, indent=2)
+
+
+def main() :
+    info("Démarrage du processus d'installation")
+    stop_wine_server()
+
+    emplacement_téléchargement = chemin_téléchargement()
+    wget(download_url(), download_location, download_hash_algorithm(), download_hash_value())
+
+    info("Traitement de l'archive")
+    wine_binary_path = find_wine_binary_in_7z(download_location)
+    unarchive_7z(download_location, wine_target_path())
+
+    update_grapejuice_settings(wine_binary_path)
+
+    stop_wine_server()
+    info("Terminé")
+
+    success_message("L'installation de Wine-TKG a réussi!")
+
+
+si __nom__ == '__main__' :
+    principale()
